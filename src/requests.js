@@ -1,5 +1,5 @@
 const { URL } = require('url');
-
+const fetch = require('node-fetch').default;
 class Request {
     /**
      * Perform an HTTP request.
@@ -12,7 +12,7 @@ class Request {
       for (const [key, value] of Object.entries(options.query || {})) {
         url.searchParams.append(key, String(value));
       }
-      const headers = new Headers();
+      const headers = new fetch.Headers();
       for (const [key, value] of Object.entries(options.headers || {})) {
         if (value) headers.set(key, String(value || ''));
       }
