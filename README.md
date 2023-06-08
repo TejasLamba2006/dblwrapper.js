@@ -1,15 +1,15 @@
 <div align="center">
-    <h1>Discord Bot List</h1><br/>
+    <h1>dblwrapper.js</h1><br/>
     <h3>wrapper for doing anything with all major botlists</h3><br/>
-    <code>npm install discord-bot-list</code><br/>
-    <code>yarn add discord-bot-list</code/><br/>
-    <code>pnpm add discord-bot-list</code><br/>
+    <code>npm install dblwrapper.js</code><br/>
+    <code>yarn add dblwrapper.js</code/><br/>
+    <code>pnpm add dblwrapper.js</code><br/>
 </div>
 
 <div align="center">
 
-[![Version](https://img.shields.io/npm/v/discord-bot-list?color=red&label=discord-bot-list)](https://github.com/TejasLamba2006/discord-bot-list)
-[![Total Downloads](https://img.shields.io/npm/dt/discord-bot-list)](https://npmjs.com/discord-bot-list)
+[![Version](https://img.shields.io/npm/v/dblwrapper.js?color=red&label=dblwrapper.js)](https://github.com/TejasLamba2006/dblwrapper.js)
+[![Total Downloads](https://img.shields.io/npm/dt/dblwrapper.js)](https://npmjs.com/dblwrapper.js)
 
 </div>
 
@@ -64,7 +64,7 @@ Discord Bot List is a comprehensive library that simplifies interacting with maj
 ### Posting Bot Stats
 
 ```js
-const { BotList, BotListPoster } = require('discord-bot-list');
+const { BotList, BotListPoster } = require('dblwrapper.js');
 
 const lists = [
     new BotList.TopGG('you-bot-id', 'your-top.gg-api-token')
@@ -90,7 +90,7 @@ poster.stopAutoPoster(); //Stop auto posting
 
 ```js
 
-const { BotList, Webhook } = require('discord-bot-list');
+const { BotList, Webhook } = require('dblwrapper.js');
 
 const lists = [
     new BotList.TopGG('you-bot-id', 'your-top.gg-api-token') //Webhook URL: https://example.com/receive/topgg/vote
@@ -120,7 +120,7 @@ webhook.on(Webhook.Events.NewVote, (botList, vote) => {
 
 - Importing
   ```js
-    const { BotList : TopGG } = require('discord-bot-list');
+    const { BotList : TopGG } = require('dblwrapper.js');
     ```
 - Constructor
     ```js

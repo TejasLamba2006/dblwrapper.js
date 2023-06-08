@@ -1,6 +1,6 @@
 {
-  "name": "discord-bot-list",
-  "version": "1.0.0",
+  "name": "dblwrapper.js",
+  "version": "1.0.1",
   "description": "A package where you can find everything to interact with discord botlists!",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TejasLamba2006/discord-bot-list.git"
+    "url": "git+https://github.com/TejasLamba2006/dblwrapper.js.git"
   },
   "keywords": [
     "top.gg",
@@ -20,7 +20,7 @@
   "author": "TejasLamba2006",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/TejasLamba2006/discord-bot-list/issues"
+    "url": "https://github.com/TejasLamba2006/dblwrapper.js/issues"
   },
-  "homepage": "https://github.com/TejasLamba2006/discord-bot-list#readme"
+  "homepage": "https://github.com/TejasLamba2006/dblwrapper.js#readme"
 }
