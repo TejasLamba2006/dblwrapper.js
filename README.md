@@ -93,7 +93,7 @@ poster.stopAutoPoster(); //Stop auto posting
 const { BotList, Webhook } = require('dblwrapper.js');
 
 const lists = [
-    new BotList.TopGG('you-bot-id', 'your-top.gg-api-token') //Webhook URL: https://example.com/receive/topgg/vote
+    new BotList.TopGG('you-bot-id', 'your-top.gg-api-token', 'webhook-token') //Webhook URL: https://example.com/receive/topgg/vote
 ];
 
 const poster = new Webhook(lists, {
@@ -124,7 +124,7 @@ webhook.on(Webhook.Events.NewVote, (botList, vote) => {
     ```
 - Constructor
     ```js
-        const topgg = new TopGG('bot-id', 'api-token', 'webhook-password);
+        const topgg = new TopGG('bot-id', 'api-token', 'webhook-password');
     ```
 - Methods
   ```js
