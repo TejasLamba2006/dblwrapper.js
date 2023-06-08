@@ -27,7 +27,7 @@ class TopGG extends BotList {
   }
 
   async getBot(id) {
-    return this._performRequest('GET', `/bots/${id}`)
+    return this.performRequest('GET', `/bots/${id}`)
       .then(this._constructBot);
   }
 
