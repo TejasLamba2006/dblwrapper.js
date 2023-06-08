@@ -28,16 +28,20 @@ const { BotList, Webhook } = require("../index");
 
 const topGG = new BotList.TopGG(
   "1109759607657725983",
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMDk3NTk2MDc2NTc3MjU5ODMiLCJib3QiOnRydWUsImlhdCI6MTY4NjIxNzA3NX0.cYYWwFf3xH3ol-XFs39iqoV8gIKWzzYlzbnzyB1poQY",
-  "topgg"
-  );
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjExMDk3NTk2MDc2NTc3MjU5ODMiLCJib3QiOnRydWUsImlhdCI6MTY4NjIxNzA3NX0.cYYWwFf3xH3ol-XFs39iqoV8gIKWzzYlzbnzyB1poQY"
+);
 
 const webhook = new Webhook([topGG], {
     port: 8080
 })
+
 webhook.on(Webhook.Events.Ready, () => {
-    console.log("Webhook ready");
-});
-webhook.on(Webhook.Events.NewVote, (list, vote) => {
-    console.log(`New vote on ${list.key}: ${vote.userId}`);
+    console.log("Webhook is ready!")
 })
+webhook.on(Webhook.Events.NewVote, (botList, vote) => {
+    console.log(`New vote on ${botList.key} from ${vote.userId}`)
+})
+
+topGG.hasVoted("1076942240791928875").then((voted) => {
+  console.log(voted);
+});

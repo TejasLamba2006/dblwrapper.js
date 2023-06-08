@@ -40,7 +40,7 @@ class TopGG extends BotList {
     return this.performRequest('GET', `/bots/${this.clientId}/check`, {
       query: { userId: id },
       requiresApiToken: true,
-    }).then(({ voted }) => voted);
+    }).then(({ voted }) => !!voted);
   }
 
   _constructBot(raw) {
