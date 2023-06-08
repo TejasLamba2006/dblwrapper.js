@@ -85,12 +85,15 @@ poster.stopAutoPoster(); //Stop auto posting
 ```
 
 ### Recieving Webhooks
+- This is a beta feature and is not fully tested yet
+- Webhook URL: `https://example.com/receive/<list>/vote`
 
 ```js
+
 const { BotList, Webhook } = require('discord-bot-list');
 
 const lists = [
-    new BotList.TopGG('you-bot-id', 'your-top.gg-api-token')
+    new BotList.TopGG('you-bot-id', 'your-top.gg-api-token') //Webhook URL: https://example.com/receive/topgg/vote
 ];
 
 const poster = new Webhook(lists, {
