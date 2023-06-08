@@ -31,11 +31,10 @@ res.status(200).send({
 });
       });
       this.server.post(`/receive/${list.key}/vote`, (req, res) => {
-        console.log(req.body);
         const authorization = req.headers.authorization;
         if (authorization !== list.webhookToken) return res.sendStatus(401);
         if (!req.body) return res.sendStatus(400);
-        const vote = list.constructWebhookVote(req.body);
+        const vote = list._constructWebhookVote(req.body);
         list.emit(Webhook.Events.NewVote, vote);
         this.emit(Webhook.Events.NewVote, list, vote);
         return Promise.resolve(this.options.handleAfterVote?.(req, res)).then(

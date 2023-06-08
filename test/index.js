@@ -39,5 +39,5 @@ webhook.on(Webhook.Events.Ready, () => {
     console.log("Webhook ready");
 });
 webhook.on(Webhook.Events.NewVote, (list, vote) => {
-    console.log(`New vote on ${list.key}: ${vote.user.id}`);
+    console.log(`New vote on ${list.key}: ${vote.userId}`);
 })
