@@ -1,6 +1,6 @@
 {
   "name": "dblwrapper.js",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A package where you can find everything to interact with discord botlists!",
   "main": "index.js",
   "scripts": {
