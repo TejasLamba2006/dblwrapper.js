@@ -1,0 +1,26 @@
+{
+  "name": "discord-bot-list",
+  "version": "1.0.0",
+  "description": "A package where you can find everything to interact with discord botlists!",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TejasLamba2006/discord-bot-list.git"
+  },
+  "keywords": [
+    "top.gg",
+    "dbl",
+    "discord",
+    "bot",
+    "list"
+  ],
+  "author": "TejasLamba2006",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/TejasLamba2006/discord-bot-list/issues"
+  },
+  "homepage": "https://github.com/TejasLamba2006/discord-bot-list#readme"
+}
