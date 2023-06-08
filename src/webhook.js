@@ -2,6 +2,7 @@ const { EventEmitter } = require("events");
 const express = require("express");
 const { Utilities, ValidationUtil } = require("./utilities");
 const { BotList } = require("./list");
+const { type } = require("os");
 
 class Webhook extends EventEmitter {
   constructor(lists, options) {
@@ -18,8 +19,19 @@ class Webhook extends EventEmitter {
   }
 
   initialize() {
-    for (const list of this.lists.values()) {
+    for (const list of this.lists.getValues()) {
+      this.server.get(`/receive/${list.key}/vote`, (req, res) => {
+res.status(200).send({
+  status: "ok",
+  type: "application/json",
+  data: {
+    key: list.key,
+  },
+
+});
+      });
       this.server.post(`/receive/${list.key}/vote`, (req, res) => {
+        console.log(req.body);
         const authorization = req.headers.authorization;
         if (authorization !== list.webhookToken) return res.sendStatus(401);
         if (!req.body) return res.sendStatus(400);

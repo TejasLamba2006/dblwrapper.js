@@ -12,7 +12,6 @@ class Request {
       for (const [key, value] of Object.entries(options.query || {})) {
         url.searchParams.append(key, String(value));
       }
-  
       const headers = new Headers();
       for (const [key, value] of Object.entries(options.headers || {})) {
         if (value) headers.set(key, String(value || ''));
@@ -22,10 +21,10 @@ class Request {
   
       const body = options.body ? JSON.stringify(options.body) : undefined;
       const response = await fetch(url, { method, headers, body });
-      if (response.ok) return response.json();
+      if (response.ok) return await response.json();
   
       const text = await response.text();
-      throw new RequestError(response.statusText, text);
+      throw new Error(response.statusText + ":" + text);
     }
   }
   
