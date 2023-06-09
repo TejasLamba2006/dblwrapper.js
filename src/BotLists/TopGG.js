@@ -32,9 +32,7 @@ class TopGG extends BotList {
   }
 
   async getUser(id) {
-    return this.performRequest('GET', `/users/${id}`, {
-      requiresApiToken: true,
-    })
+    return this.performRequest('GET', `/users/${id}`)
       .then(this._constructUser);
   }
 
