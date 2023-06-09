@@ -34,7 +34,8 @@ class BotList extends EventEmitter {
     if (!options.headers) options.headers = {};
     options.headers['Authorization'] ??= this._formatApiToken();
     if (options.requiresApiToken && !options.headers['Authorization']) {
-      throw new Error('MissingAPIToken', this.title);
+      console.log(this.title)
+      throw new Error('MissingAPIToken');
     }
     return Request.perform(method, new URL(this.apiUrl + path), options);
   }
